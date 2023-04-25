@@ -14,21 +14,19 @@ public class TopBooks {
 	@Id
     @Column(name="id")
 	private int bookid;
+	private String bookname;
+	private String authorname;
+	private String bookprice;
+	private int rating;
+	private String pages;
+	private String sold;
+	private String aname;
+	private String bname;
+	private String price;
+	private String page;
+
 	
 	private int ranking;
-
-	private String bookname;
-
-	private String authorname;
-
-	private String bookprice;
-
-	private int rating;
-	
-	private String pages;
-	
-	private String sold;
-	
 	public int getBookid() {
 		return bookid;
 	}
@@ -77,7 +75,30 @@ public class TopBooks {
 	public void setSold(String sold) {
 		this.sold = sold;
 	}
-	
-	
+	public String getAname() {
+		return aname;
+	}
+	public void setAname(String aname) {
+		this.aname = aname;
+	}
+	public String getBname() {
+		return bname;
+	}
+	public void setBname(String bname) {
+		this.bname = bname;
+	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	public String getPage() {
+		return page;
+	}
+	public void setPage(String page) {
+		this.page = page;
+	}
+
 
 }

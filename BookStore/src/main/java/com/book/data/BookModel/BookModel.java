@@ -1,19 +1,22 @@
 package com.book.data.BookModel;
 
 import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
 @Entity
-@Table(name="bestbook")
+@Table(name="n")
 public class BookModel {
 	
 	@Id
-	@Column(name="bid")
+	@Column(name="bookid")
 	private int bid;
 	private String bname;
 	private int ratings;
+	
 	
 	
 	public int getBid() {

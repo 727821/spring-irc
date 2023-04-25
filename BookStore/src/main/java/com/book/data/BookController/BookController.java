@@ -21,7 +21,7 @@ public class BookController {
 	@Autowired
 	public BookService bser;
 	
-	@PostMapping("/save")
+	@PostMapping("/saveBook")
 	public BookModel addDetails(@RequestBody BookModel ba)
 	{
 		return bser.saveInfo(ba);
@@ -29,18 +29,19 @@ public class BookController {
 	@GetMapping("/getBook")
 	public List<BookModel> getDetails()
 	{
-		return bser.getInfo();
+		List<BookModel>listobj=bser.getInfo();
+		return listobj;
 	}
 	@PutMapping("/updateBook")
 	public BookModel updateDetails(@RequestBody BookModel bb)
 	{
 		return bser.updateInfo(bb);
 	}
-	@DeleteMapping("/delete/{id}")
-	public String deleteDetails(@PathVariable int id)
+	@DeleteMapping("/delete/{bid}")
+	public String deleteDetails(@PathVariable("bid") int bid)
 	{
-		bser.deleteInfo(id);
-		return "bookid "+id+"deleted";
+		bser.deleteInfo(bid);
+		return "bookid "+bid+"deleted";
 	}
 	
 }

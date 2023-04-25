@@ -9,13 +9,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import com.book.data.Model.TopBooks;
 import com.book.data.Service.bookservice;
 
 
+
 @RestController
+
 public class bookController {
 	
 	@Autowired
@@ -26,17 +29,17 @@ public class bookController {
 	{
 		return bser.saveInfo(ta);
 	}
-	@GetMapping("/getbooks")
+	@GetMapping("/getBooks")
 	public List<TopBooks> getDetails()
 	{
 		return bser.getInfo();
 	}
-	@PutMapping("/updatebooks")
+	@PutMapping("/updateBooks")
 	public TopBooks updaateDetails(@RequestBody TopBooks id)
 	{
 		return bser.updateInfo(id);
 	}
-	@DeleteMapping("/deletebooks/{bid}")
+	@DeleteMapping("/delete/{bid}")
 	public String deleteDetails(@PathVariable int bookid)
 	{
 		return "Bookid "+ bookid +" Deleted";

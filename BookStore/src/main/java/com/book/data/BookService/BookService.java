@@ -12,7 +12,7 @@ import com.book.data.BookRepository.BookRepository;
 public class BookService {
 	
 	@Autowired
-	public BookRepository brepo;
+	BookRepository brepo;
 	
 	public BookModel saveInfo(BookModel bm)
 	{
@@ -29,8 +29,8 @@ public class BookService {
 		return brepo.saveAndFlush(bn);
 	}
 	
-	public void deleteInfo(int id)
+	public void deleteInfo(int bid)
 	{
-		brepo.deleteById(id);
+		brepo.deleteById(bid);
 	}
 }
