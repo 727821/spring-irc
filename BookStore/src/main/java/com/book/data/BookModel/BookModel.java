@@ -1,5 +1,7 @@
 package com.book.data.BookModel;
 
+
+
 import jakarta.persistence.Column;
 
 import jakarta.persistence.Entity;
@@ -39,3 +41,54 @@ public class BookModel {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

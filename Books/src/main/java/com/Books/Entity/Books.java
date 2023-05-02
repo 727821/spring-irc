@@ -8,15 +8,23 @@ public class Books {
 @Id
 private int id;
 private String bname;
+private String aname;
 private int price;
 private int rating;
 private int pages;
 private int NoOfVolumes;
+
 public int getId() {
 	return id;
 }
 public void setId(int id) {
 	this.id = id;
+}
+public String getAname() {
+	 return aname;
+}
+public void setAname(String aname) {
+	this.aname = aname;
 }
 public String getBname() {
 	return bname;
@@ -46,6 +54,6 @@ public int getNoOfVolumes() {
 	return NoOfVolumes;
 }
 public void setNoOfVolumes(int noOfVolumes) {
-	NoOfVolumes = noOfVolumes;
+	this.NoOfVolumes = noOfVolumes;
 }
 }
