@@ -3,7 +3,7 @@ package com.Books.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Books.Entity.Books;
-import com.Books.Repository.BooksRepository;
 import com.Books.Service.BooksService;
+
+import jakarta.persistence.TableGenerator;
 
 @RestController
 public class BooksController {
@@ -68,6 +69,8 @@ public class BooksController {
 	{
 		return serobj.paginationSorting(pnu, psize, bname);
 	}
+	
+	
 	
 	
 	
